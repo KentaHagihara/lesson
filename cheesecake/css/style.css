@@ -161,96 +161,188 @@ header{
     color: #333333;
     border-bottom: #333333 1px solid;
 }
+
 /*campaign*/
 #campaign{
-    background-color: beige;
-    padding: 50px 10vw;
-    display: flex;
-    align-items: center;
     justify-content: space-around;
+    background-color: #f9f8f2;
 }
 #campaign img{
-    width: 40vw;
+    width: 37.5vw;
     border-radius: 10px;
 }
-.cam-text{
-    margin-left: 50px;
+.split{
+    display: flex;
+    padding: 50px 10vw 100px;
 }
-.smaller{
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 10px;
-    font-size: 0.75rem;
+.split-center{
+    align-items: center;
 }
-.bigger{
+.split-r{
+    margin-left: 40px;
+    padding: 20px;
+    min-width: 30vw;
+}
+.center{
     text-align: center;
+}
+.split-sub{
     font-weight: bold;
+    font-size: 0.7rem;
     margin-bottom: 15px;
-    font-size: 1.25rem;
 }
-.period{
+.split-title{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.white-box{
+    padding: 20px 30px;
     background-color: white;
-    text-align: left;
-    padding: 20px 28px;
 }
-.sub-title{
-    color: darkgrey;
-    margin-bottom: 5px;
+.white-box li{
+    font-size: 0.9rem;
+}
+.box-left{
+    text-align: left;
+}
+.box-title{
+    color: gray;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding:20px 0 5px;
 }
 .date{
-    border-bottom: darkgray 0.1px solid;
     padding-bottom: 15px;
-}
-.caution{
-    padding-top: 15px;
-}
-.period li{
-    font-size: 14px;
+    border-bottom: 1px gray solid;
 }
 
-/*tea collection*/
-#onSale{
-    background-color: aliceblue;
-    display: flex;
-    align-items: flex-start;
+/*tea cake*/
+#sale{
     justify-content: space-around;
-    padding: 50px 14vw;
+    background-color: rgb(234, 234, 234);
+    align-items: flex-start;
+    padding: 50px 12vw;
 }
-#onSale img{
+#sale img{
+    width: 36vw;
+}
+.split-sale{
+    margin-left: 20px;
+    padding: 20px 80px;
+    min-width: 25vw;
+}
+.sale-text{
+    padding-top: 40px;
+}
+.shop-name{
+    padding-top: 40px;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+.sale-title{
+    font-size: 1.25rem;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+.btn-sale{
+    padding: 17.5px 25px;
+    margin: 0 -25px 30px -25px;
+    border: rgba(215, 215, 215, 0.6) 0.1px solid;
+    border-radius: 2px;
+}
+.btn-top{
+    margin-top: 40px;
+}
+
+/*limited*/
+#limited{
+    justify-content: space-around;
+    background-color: #f9f8f2;
+}
+#limited img{
+    margin-left: 3vw;
     width: 35vw;
 }
-.collection-text{
-    background-color: white;
-    margin-left: 25px;
-    padding: 50px 75px;
-    text-align: center;
+.limit-sub{
+    margin-bottom: 30px;
 }
-.shopName{
-    font-size: 1.5rem;
+.limit-title{
     font-weight: bold;
-    letter-spacing: 5px;
-}
-.collection-title{
     font-size: 1.25rem;
-    font-weight: bold;
-    margin-bottom: 3rem;
+    margin-bottom: 40px;
+    padding-right: 5vw;
 }
-.item{
-    margin-bottom: 2rem;
+.btn{
+    max-width: 75%;
 }
-.text{
-    margin-bottom: 1.75rem;
+.btn a{
+    padding: 20px 25px;
+    border: rgba(215, 215, 215, 0.6) 0.1px solid;
+    border-radius: 2px;
 }
 .btn-inner{
     display: flex;
     justify-content: space-between;
-    padding: 16px 20px;
-    margin: 0 -20px;
-    border: 1px solid rgba(145, 145, 145, 0.6);
-    margin-bottom: 1rem;
+}
+.arrow{
+    color: gray;
 }
 
-/*cheesecake*/
-.cheesecake .item{
-    margin-top: 1.75rem;
+/*pickup*/
+#pickup{
+    justify-content: space-around;
+    background-color: rgb(234, 234, 234);
+}
+#pickup img{
+    margin-left: 3vw;
+    width: 35vw;
+}
+
+/*gift*/
+#gift{
+    justify-content: space-around;
+}
+#gift img{
+    padding-left: unset;
+    width: 50vw;
+}
+.split-gift{
+    display: flex;
+    padding: 0 10vw 50px 0;
+}
+.biggest{
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 3.5rem;
+    margin-bottom: 30px;
+}
+.gift-normal{
+    margin-bottom: 25px;
+}
+.btn-gift{
+    max-width: 85%;
+}
+
+/*topics*/
+#topics{
+    padding: 100px 30px;
+    background-color: #606060;
+    text-align: center;
+}
+#topics p{
+    letter-spacing: 2px;
+    color: white;
+    font-weight: bold;
+}
+
+/*journal*/
+#journal{
+    padding: 100px 30px;
+    text-align: center;
+    background-color: rgb(234, 234, 234);
+}
+#journal img{
+    margin-top: 50px;
+    width: 60vw;
 }
