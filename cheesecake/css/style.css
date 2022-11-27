@@ -51,6 +51,7 @@ img{
     transform: translate(0,0);
 }
 
+
 /*header
 ------------------------------*/
 .fixed-top{
@@ -61,10 +62,14 @@ img{
     text-align: center;
     margin: auto 0;
 }
-header{
+.inner{
     display: flex;
     justify-content: space-between;
-    margin: auto 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+header{
     padding: 15px 10%;
     background-color: white;
 }
@@ -115,7 +120,7 @@ header{
     right: 0;
     z-index: 100;
     width: 40%;
-    max-height: 100vh;
+    height: 100vh;
     background-color: rgb(70, 75, 70);
     background-size: cover;
     padding: 7% 5%;
@@ -170,8 +175,13 @@ header{
 /*thema*/
 #thema{
     margin: auto 20vw;
+}
+/*画面幅が2000pxを超えたらサイズ変えた方がいい*/
+.inner-thema{
+    max-width: 1150px;
     padding: 50px 0 200px;
     position: relative;
+    margin: 0 auto;
 }
 .thema-box{
     display: flex;
@@ -188,7 +198,7 @@ header{
 }
 .thema-left-bottom{
     width: 25vw;
-    margin: -30% 0 0 7%;
+    margin: -24% 0 0 7%;
 }
 #thema h2{
     font-size: 2.5rem;
@@ -202,7 +212,7 @@ header{
     position: absolute;
     bottom: 100px;
     right: 20px;
-    padding:0 0 5px 30px;
+    padding:0 0 15px 30px;
     color: #333333;
     border-bottom: #333333 1px solid;
 }
@@ -212,16 +222,17 @@ header{
     justify-content: space-around;
     background-color: #f9f8f2;
 }
+.inner-campaign{
+    max-width: 1150px;
+    padding: 50px 20vw 200px 20vw;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 #campaign img{
     width: 37.5vw;
     border-radius: 10px;
-}
-.split{
-    display: flex;
-    padding: 50px 10vw 100px;
-}
-.split-center{
-    align-items: center;
 }
 .split-r{
     margin-left: 40px;
@@ -262,19 +273,23 @@ header{
 }
 
 /*tea cake*/
-#sale{
-    justify-content: space-around;
+.sale{
     background-color: rgb(234, 234, 234);
-    align-items: flex-start;
-    padding: 50px 12vw;
 }
-#sale img{
+.sale img{
     width: 36vw;
+}
+.inner-sale{
+    max-width: 1150px;
+    padding: 50px 10vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin: 0 auto;
 }
 .split-sale{
     margin-left: 20px;
     padding: 20px 80px;
-    min-width: 25vw;
 }
 .sale-text{
     padding-top: 40px;
@@ -304,9 +319,9 @@ header{
 #limited{
     justify-content: space-around;
     background-color: #f9f8f2;
+    padding: 50px 10vw;
 }
 #limited img{
-    margin-left: 3vw;
     width: 35vw;
 }
 .limit-sub{
@@ -343,14 +358,24 @@ header{
     margin-left: 3vw;
     width: 35vw;
 }
+.inner-pickup{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    padding: 50px 10vw;
+}
 
 /*gift*/
-#gift{
-    justify-content: space-around;
-}
 #gift img{
     padding-left: unset;
     width: 50vw;
+}
+.inner-gift{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .split-gift{
     display: flex;
@@ -375,11 +400,55 @@ header{
     background-color: #606060;
     text-align: center;
 }
-#topics p{
+.inner-topic{
+    max-width: 1150px;
+    margin: 0 auto;
+}
+.topic-title{
     letter-spacing: 2px;
     color: white;
     font-weight: bold;
+    margin-bottom: 50px;
 }
+.flex{
+    display: flex;
+    align-items: center;
+}
+.arrow-2{
+    color: white;
+    font-size: 2rem;
+}
+.images{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 300px 300px 300px;
+    margin: 0 auto;
+}
+.one,
+.two,
+.three{
+    display: block;
+}
+.four{
+    display: none;
+}
+.five{
+    display: none;
+}
+.topic-item{
+    width: 275px;
+    padding: 10px;
+    background-color: #f9f8f2;
+    transition: all 1s;
+}
+.topic-bigger{
+    font-weight: bold;
+    padding: 20px 20px;
+}
+.topic-smaller{
+    padding: 0 20px 50px;
+}
+
 
 /*journal*/
 #journal{
@@ -401,7 +470,6 @@ header{
 }
 .journal-date{
     color: #606060;
-    font-size: 0.8rem;
     position: absolute;
     bottom: 10px;
     right: 20px;
@@ -432,7 +500,6 @@ header{
     bottom: 30px;
     right: 20px;
     color: #606060;
-    font-size: 0.8rem;
 }
 .btn-journal{
     margin: 70px auto;
@@ -462,7 +529,6 @@ header{
     position: absolute;
     top: 0;
     left: 30px;
-    font-size: 0.8rem;
     color: #bababa;
 }
 .news-text{
@@ -482,10 +548,17 @@ header{
     width: 37.5vw;
     margin-left: -5vw;
 }
+.inner-cards{
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;    
+}
 .split-cards{
     min-width: 30vw;
     text-align: center;
-    margin-left: -25vw;
+    margin-left: 20px;
     padding-top: 30px;
 }
 .btn-cards{
@@ -588,6 +661,9 @@ footer a{
         font-size: 12px;
         padding: 8px 10%;
     }
+    .inner{
+        max-width: 450px;
+    }
     .logo img{
         width: 160px;
     }
@@ -626,7 +702,13 @@ footer a{
     #campaign img{
         width: 100%;
     }
-    .split{
+    .inner-campaign{
+        flex-direction: column;
+        padding: 50px 3vw 100px;
+        padding-top: 40px;
+        margin-left: unset;        
+    }
+    .inner-sale{
         flex-direction: column;
         padding: 50px 3vw 100px;
     }
@@ -634,11 +716,14 @@ footer a{
         padding-top: 40px;
         margin-left: unset;
     }
+    .btn-sale{
+        margin: 10px 60px;
+    }
 
-    #sale{
+    .sale{
         padding: 50px 3vw;
     }
-    #sale img{
+    .sale img{
         width: 100%;
     }
     .center{
@@ -646,6 +731,10 @@ footer a{
     }
     .split-sale{
         margin-left: unset;
+        width: 100%;
+        padding: unset;
+        text-align: center;
+        padding: 20px 0 30px;
     }
 
 
@@ -656,25 +745,29 @@ footer a{
     .limit-title{
         padding-right: unset;
     }
+    .inner-limited{
+        display: block;
+    }
 
 
     #pickup img{
         width: 100%;
         margin-left: unset;
     }
+    .inner-pickup{
+        display: block;
+    }
 
 
     #gift{
-        background-image: url(../images/gift.jpg);
+        background-image: url(../images/gift-media.webp);
         background-size: cover;
         background-position: center top;;
         min-height: 100vh;
         position: relative;
     }
     #gift img{
-        width: 100vh;
-        position: absolute;
-        top: 0;
+        display: none;
     }
     .split-gift{
         flex-direction: column;
@@ -689,7 +782,7 @@ footer a{
         line-height: 2.2rem;
     }
     .btn-gift{
-        max-width: 55%;
+        max-width: 350px;
         background-color: rgba(245, 245, 245, 0.5);
         font-size: 0.8rem;
     }
@@ -723,9 +816,39 @@ footer a{
         margin-left: unset;
         padding-top: 60px;
     }
+    .inner-cards{
+        display: block;
+    }
 
 
     .footer-box{
         margin-left: 20px;
+    }
+}
+
+@media(min-width:1500px){
+    #campaign img{
+        width: 37.5%;
+    }
+    .inner-sale{
+        padding: 50px;
+    }
+    .sale img{
+        max-width: 600px;
+    }
+    .white-box{
+        width: 560px;
+    }
+    .split-sale{
+        max-width: 15vw;
+    }#limited img{
+        width: 35%;
+        padding-left: 50px;
+    }
+    #pickup{
+        padding: 50px;
+    }
+    #pickup img{
+        width: 35%;
     }
 }

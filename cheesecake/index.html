@@ -8,26 +8,29 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <!--CSS-->
-    <link rel="stylesheet" href="htpps://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="hpps://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="./css/style.css">
 
     <!--javascript-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="./script.js"></script>
 </head>
 <body>
-    <section id="home">
-        <div class="fixed-top">
-            <header>
+    <div class="fixed-top">
+        <header>
+            <div class="inner">
                 <a class="logo" href="index.html"><img src="./images/logo.svg" alt=""></a>
                 <div class="header-right">            
                     <a href="login.html"><p>ログイン</p></a>
                     <a href="#"><img class="icon-menu" src="./images/icon__menu.svg" alt=""></a>
                 </div>
-            </header>
-            <div class="ad-head">
-                <a href="#"><p>【11/21まで】対象商品のケーキ3本以上のご購入で送料無料</p></a>
             </div>
+        </header>
+        <div class="ad-head">
+            <a href="#"><p>【11/21まで】対象商品のケーキ3本以上のご購入で送料無料</p></a>
         </div>
+    </div>
+    <section id="home">
         <div class="menu">
             <div class="close-modal">
                 <i class="fa fa-1.5x fa-times"> 閉じる</i>
@@ -57,42 +60,46 @@
         </div>
     </section><!--home-->
     <section id="thema">
-        <ul class="thema-box">
-            <li><img class="fadein thema-left-top" src="./images/thema_left-top.webp" alt=""></li>
-            <li><img class="fadein thema-right" src="./images/thema_right.webp" alt=""></li>
-            <li><img class="fadein thema-left-bottom" src="./images/thema_left-bottom.webp" alt=""></li>
-        </ul> 
-        <h2>世界一じゃなく、<br>あなたの人生最高に。</h2>
-        <p>濃厚なのにスッと溶ける。<br>おいしい記憶をたどり、<br>シェフだからこその味わいを生み出す。<br>世界へ誇るトーキョーチーズケーキを。</p>
-        <div class="view-more">
-            <a href="#">VIEW MORE</a>
+        <div class="inner-thema">
+            <ul class="thema-box">
+                <li><img class="fadein thema-left-top" src="./images/thema_left-top.webp" alt=""></li>
+                <li><img class="fadein thema-right" src="./images/thema_right.webp" alt=""></li>
+                <li><img class="fadein thema-left-bottom" src="./images/thema_left-bottom.webp" alt=""></li>
+            </ul> 
+            <h2>世界一じゃなく、<br>あなたの人生最高に。</h2>
+            <p>濃厚なのにスッと溶ける。<br>おいしい記憶をたどり、<br>シェフだからこその味わいを生み出す。<br>世界へ誇るトーキョーチーズケーキを。</p>
+            <div class="view-more">
+                <a href="#">VIEW MORE</a>
+            </div>
         </div>
     </section><!--thema-->
 
 <!--campaign----------------------------->
     <section id="campaign" class="split split-center fadein">
-        <img src="./images/campaign.webp" alt="">
-        <div class="split-r center">
-            <p class="split-sub">対象商品のケーキ3本以上まとめてご購入いただくと</p>
-            <p class="split-title">送料無料キャンペーン実施中</p>
-            <div class="white-box box-left">
-                <p class="box-title">期間</p>
-                <p class="date">11/13（日）〜 11/21（月）</p>
-                <p class="box-title">注意事項</p>
-                <ul>
-                    <li><p>・予約販売商品、オプション商品は対象外です。あらかじめご了承ください。</p></li>
-                    <li><p>・購入画面の配送方法で、「ケーキ3本以上で送料無料（冷凍便）」をご選択ください。</p></li>
-                    <li><p>・対象商品や詳細はこちらから。</p></li>
-                </ul>
+        <div class="inner-campaign">
+            <img src="./images/campaign.webp" alt="">
+            <div class="split-r center">
+                <p class="split-sub">対象商品のケーキ3本以上まとめてご購入いただくと</p>
+                <p class="split-title">送料無料キャンペーン実施中</p>
+                <div class="white-box box-left">
+                    <p class="box-title">期間</p>
+                    <p class="date">11/13（日）〜 11/21（月）</p>
+                    <p class="box-title">注意事項</p>
+                    <ul>
+                        <li><p>・予約販売商品、オプション商品は対象外です。あらかじめご了承ください。</p></li>
+                        <li><p>・購入画面の配送方法で、「ケーキ3本以上で送料無料（冷凍便）」をご選択ください。</p></li>
+                        <li><p>・対象商品や詳細はこちらから。</p></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 <!--campaign----------------------------->
 
 <!--tea----------------------------->
-    <section id="sale" class="split">
-        <img class="fadein" src="./images/teaCollection.webp" alt="">
-        <div class="center">
+    <section id="tea" class="sale split">
+        <div class="inner-sale">
+            <img class="fadein" src="./images/teaCollection.webp" alt="">
             <div class="split-sale white-box fadein">
                 <p class="shop-name  fadein">Mr.CHEESECAKE</p>            
                 <p class="sale-title">TeaCollection</p>
@@ -113,50 +120,54 @@
                         <p class="arrow">✉</p>
                     </a>
                 </div>
-            </div>            
+            </div>
         </div>
     </section>
 <!--tea----------------------------->
 
 <!--cake----------------------------->
-<section id="sale" class="split">
-    <img class="fadein" src="./images/cheesecake.webp" alt="">
-    <div class="center">
-        <div class="split-sale white-box fadein">
-            <p class="shop-name fadein">Mr.CHEESECAKE</p>
-            <p class="sale-text">
-                濃厚なのにスッと溶ける、
-                <br>人生最高のチーズケーキ。
-            </p>
-            <p class="sale-text">毎日午前10時から販売開始</p>
-            <div class="btn-top btn-sale">
-                <a class="btn-inner" href="#">
-                    <p>商品を見る</p>
-                    <p class="arrow">→</p>
-                </a>
-            </div>
-            <div class="btn-sale">
-                <a class="btn-inner" href="#">
-                    <p>販売開始のお知らせを受け取る</p>
-                    <p class="arrow">✉</p>
-                </a>
-            </div>
-        </div>            
+<section id="cake" class="sale split">
+    <div class="inner-sale">
+        <img class="fadein" src="./images/cheesecake.webp" alt="">
+        <div class="center">
+            <div class="split-sale white-box fadein">
+                <p class="shop-name fadein">Mr.CHEESECAKE</p>
+                <p class="sale-text">
+                    濃厚なのにスッと溶ける、
+                    <br>人生最高のチーズケーキ。
+                </p>
+                <p class="sale-text">毎日午前10時から販売開始</p>
+                <div class="btn-top btn-sale">
+                    <a class="btn-inner" href="#">
+                        <p>商品を見る</p>
+                        <p class="arrow">→</p>
+                    </a>
+                </div>
+                <div class="btn-sale">
+                    <a class="btn-inner" href="#">
+                        <p>販売開始のお知らせを受け取る</p>
+                        <p class="arrow">✉</p>
+                    </a>
+                </div>
+            </div>            
+        </div>
     </div>
 </section>
 <!--tea----------------------------->
 
 <!--limited---------------------------->
 <section id="limited" class="split split-center">
-    <img class="fadein" src="./images/gateauAuChocolat.webp" alt="">
-    <div class="split-r">
-        <p class="limit-sub">期間限定商品</p>
-        <p class="limit-title">「Tam Lab.」第2弾！ガトーショコラが11/20（日）・21（月）に登場</p>
-        <div class="btn">
-            <a class="btn-inner" href="#">
-                <p>詳細を見る</p>
-                <p class="arrow">→</p>
-            </a>
+    <div class="inner inner-limited">
+        <img class="fadein" src="./images/gateauAuChocolat.webp" alt="">
+        <div class="split-r">
+            <p class="limit-sub">期間限定商品</p>
+            <p class="limit-title">「Tam Lab.」第2弾！ガトーショコラが11/20（日）・21（月）に登場</p>
+            <div class="btn">
+                <a class="btn-inner" href="#">
+                    <p>詳細を見る</p>
+                    <p class="arrow">→</p>
+                </a>
+            </div>
         </div>
     </div>
 </section>
@@ -164,15 +175,17 @@
 
 <!--pickup---------------------------->
 <section id="pickup" class="split split-center">
-    <img class="fadein" src="./images/pickup.webp" alt="">
-    <div class="split-r">
-        <p class="limit-sub">期間限定商品</p>
-        <p class="limit-title">期間限定のポップアップストアが全国各地でオープン</p>
-        <div class="btn">
-            <a class="btn-inner" href="#">
-                <p>詳細を見る</p>
-                <p class="arrow">→</p>
-            </a>
+    <div class="inner-pickup">
+        <img class="fadein" src="./images/pickup.webp" alt="">
+        <div class="split-r">
+            <p class="limit-sub">期間限定商品</p>
+            <p class="limit-title">期間限定のポップアップストアが全国各地でオープン</p>
+            <div class="btn">
+                <a class="btn-inner" href="#">
+                    <p>詳細を見る</p>
+                    <p class="arrow">→</p>
+                </a>
+            </div>
         </div>
     </div>
 </section>
@@ -180,15 +193,17 @@
 
 <!--gift----------------------------->
     <section id="gift" class="split-gift split-center">
-        <img class="fadein" src="./images/gift.jpg" alt="">
-        <div class="split-r gift-text">
-            <p class="biggest">大切な人への贈り物に、<br>Mr. CHEESECAKE を。</p>
-            <p class="gift-normal">シーンや贈る相手に合わせて、様々なギフトの形をご用意しております。</p>
-            <div class="btn btn-gift">
-                <a class="btn-inner" href="#">
-                    <p>Mr.CHEESECAKE Gift Collections</p>
-                    <p class="arrow">→</p>
-                </a>
+        <div class="inner-gift">
+            <img class="fadein" src="./images/gift.jpg" alt="">
+            <div class="split-r gift-text">
+                <p class="biggest">大切な人への贈り物に、<br>Mr. CHEESECAKE を。</p>
+                <p class="gift-normal">シーンや贈る相手に合わせて、様々なギフトの形をご用意しております。</p>
+                <div class="btn btn-gift">
+                    <a class="btn-inner" href="#">
+                        <p>Mr.CHEESECAKE Gift Collections</p>
+                        <p class="arrow">→</p>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -196,7 +211,75 @@
 
 <!--topics----------------------------->
     <section id="topics">
-        <p>TOPICS</p>
+        <div class="inner-topic">
+        <p class="topic-title">TOPICS</p>
+        <div class="flex">
+            <a class="arrow-2 arrow-left">←</a>
+            <ul class="images">
+                <li>
+                    <div class="topic-item one">
+                        <a href="#">
+                            <picture>
+                                <source src="./images/topic-1.webp">
+                                <img src="./images/topic-1.webp" alt="">
+                            </picture>
+                            <p class="topic-bigger">お茶の香りに酔いしれる、新しいフレーバー「Tea Cellection」の魅力</p>
+                            <p class="topic-smaller">香り豊かな３種類の新フレーバーは。ほうじ茶、東方美人、ジャスミン。</p>
+                        </a>
+                    </div>
+                </li>
+                <li class="two">
+                    <div class="topic-item">
+                        <a href="#">
+                            <picture>
+                                <source src="./images/topic-2.webp">
+                                <img src="./images/topic-2.webp" alt="">
+                            </picture>
+                            <p class="topic-bigger">お茶の香りに酔いしれる、新しいフレーバー「Tea Cellection」の魅力</p>
+                            <p class="topic-smaller">香り豊かな３種類の新フレーバーは。ほうじ茶、東方美人、ジャスミン。</p>    
+                        </a>
+                    </div>
+                </li>
+                <li class="three">
+                    <div class="topic-item">
+                    <a href="#">
+                        <picture>
+                            <source src="./images/topic-3.webp">
+                            <img src="./images/topic-3.webp" alt="">
+                        </picture>
+                        <p class="topic-bigger">お茶の香りに酔いしれる、新しいフレーバー「Tea Cellection」の魅力</p>
+                        <p class="topic-smaller">香り豊かな３種類の新フレーバーは。ほうじ茶、東方美人、ジャスミン。</p>
+                    </a>
+                </div>
+                </li>
+                <li class="four">
+                    <div class="topic-item">
+                        <a href="#">
+                            <picture>
+                                <source src="./images/topic-4.webp">
+                                <img src="./images/topic-4.webp" alt="">
+                            </picture>
+                            <p class="topic-bigger">お茶の香りに酔いしれる、新しいフレーバー「Tea Cellection」の魅力</p>
+                            <p class="topic-smaller">香り豊かな３種類の新フレーバーは。ほうじ茶、東方美人、ジャスミン。</p>
+                        </a>
+                    </div>
+                </li>
+                <li class="five">
+                    <div class="topic-item">
+                        <a href="#">
+                            <picture>
+                                <source src="./images/topic-5.webp">
+                                <img src="./images/topic-5.webp" alt="">
+                            </picture>
+                            <p class="topic-bigger">お茶の香りに酔いしれる、新しいフレーバー「Tea Cellection」の魅力</p>
+                            <p class="topic-smaller">香り豊かな３種類の新フレーバーは。ほうじ茶、東方美人、ジャスミン。</p>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <a class="arrow-2 arrow-right">→</a>
+        </div>
+        </div>
     </section>
 <!--topics----------------------------->
 
@@ -315,13 +398,15 @@
 
 <!--cards----------------------------->
 <section id="cards" class="split split-center">
-    <img class="fadein" src="./images/cards.webp" alt="">
-    <div class="split-cards">
-        <p>あなたの大切な人へ、<br>グリーティングカードを贈ってみませんか？</p>
-        <div class="btn-cards">
-            <a href="#">
-                <p>カードを贈る</p>
-            </a>
+    <div class="inner-cards">
+        <img class="fadein" src="./images/cards.webp" alt="">
+        <div class="split-cards">
+            <p>あなたの大切な人へ、<br>グリーティングカードを贈ってみませんか？</p>
+            <div class="btn-cards">
+                <a href="#">
+                    <p>カードを贈る</p>
+                </a>
+            </div>
         </div>
     </div>
 </section>
@@ -354,7 +439,6 @@
     <p class="copyrights"><small>&copy;Copyright 2022 MR.CHEESECAKE All rights reserved</small></p>
 </footer>
 
-<script src="./script.js"></script>
 </body>
 
 </html>

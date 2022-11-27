@@ -28,5 +28,13 @@ $(function(){
         })
     })
 
+
+    $('.arrow-2').click(function(){
+        $('.one').css('display','none');
+        $('.two').css('transition','all 1s');
+        $('.two').css('transform','translate(-310px,0)');
+        $('.three').css('transition','all 1s');
+        $('.three').css('transform','translate(-310px,0)');
+    });
 });
 
