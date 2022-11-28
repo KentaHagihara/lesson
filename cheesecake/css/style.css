@@ -7,6 +7,7 @@ html{
 }
 body{
     color: #333333;
+    width: 100%;
 }
 li{
     list-style: none;
@@ -110,7 +111,7 @@ header{
     min-height: 100vh;
 }
 .home-content p{
-    padding-top: 30%;
+    padding-top: 50vh;
 }
 
 /*デフォルトは非表示*/
@@ -253,6 +254,7 @@ header{
 }
 .white-box{
     padding: 20px 30px;
+    width: 36vw;
     background-color: white;
 }
 .white-box li{
@@ -289,7 +291,6 @@ header{
 }
 .split-sale{
     margin-left: 20px;
-    padding: 20px 80px;
 }
 .sale-text{
     padding-top: 40px;
@@ -307,7 +308,7 @@ header{
 }
 .btn-sale{
     padding: 17.5px 25px;
-    margin: 0 -25px 30px -25px;
+    margin: 0 25px 30px 25px;
     border: rgba(215, 215, 215, 0.6) 0.1px solid;
     border-radius: 2px;
 }
@@ -355,7 +356,6 @@ header{
     background-color: rgb(234, 234, 234);
 }
 #pickup img{
-    margin-left: 3vw;
     width: 35vw;
 }
 .inner-pickup{
@@ -379,7 +379,7 @@ header{
 }
 .split-gift{
     display: flex;
-    padding: 0 10vw 50px 0;
+    padding-right: 10vw;
 }
 .biggest{
     font-size: 2rem;
@@ -400,8 +400,8 @@ header{
     background-color: #606060;
     text-align: center;
 }
-.inner-topic{
-    max-width: 1150px;
+.inner-topics{
+    max-width: 1100px;
     margin: 0 auto;
 }
 .topic-title{
@@ -419,27 +419,20 @@ header{
     font-size: 2rem;
 }
 .images{
-    display: grid;
-    gap: 15px;
-    grid-template-columns: 300px 300px 300px;
+    display: flex;
+    overflow: hidden;
+    width: 900px;
+    height: 410px;/*heightを指定しなければ高さが潰れてしまった*/
     margin: 0 auto;
-}
-.one,
-.two,
-.three{
-    display: block;
-}
-.four{
-    display: none;
-}
-.five{
-    display: none;
+    position: relative;
 }
 .topic-item{
-    width: 275px;
+    width: 260px;
+    height: auto;
     padding: 10px;
+    margin-right: 20px;
     background-color: #f9f8f2;
-    transition: all 1s;
+    transition: all 0.6s;
 }
 .topic-bigger{
     font-weight: bold;
@@ -447,6 +440,28 @@ header{
 }
 .topic-smaller{
     padding: 0 20px 50px;
+}
+.one,.test1{
+    position: absolute;
+    left: 0;
+}
+.two,.test2{
+    position: absolute;
+    left: 300px;
+}
+.three,.test3{
+    position: absolute;
+    left: 600px;
+}
+.zero,.test4{
+    position: absolute;
+    left: -300px;
+    opacity: 0;
+}
+.four,.test5{
+    position: absolute;
+    left: 900px;
+    opacity: 0;
 }
 
 
@@ -609,8 +624,8 @@ header{
     border-radius: 2px;
 }
 input[type="submit"]{
-    width: 15%;
     border: #dfdfdf 0.1px solid;
+    margin-left: 20px;
     padding: 20px;
     color: white;
     background-color: #333333;
@@ -657,12 +672,12 @@ footer a{
 }
 
 @media(max-width:750px){
+    .home-content{
+        min-height: 75vh;
+    }
     header{
         font-size: 12px;
-        padding: 8px 10%;
-    }
-    .inner{
-        max-width: 450px;
+        padding: 8px 20px;
     }
     .logo img{
         width: 160px;
@@ -680,6 +695,12 @@ footer a{
 
     #thema{
         margin: auto 20px;
+    }
+    #thema h2{
+        font-size: 1.5rem;
+    }
+    #thema p{
+        font-size: 0.9rem;
     }
     .thema-box{
         max-width: 750px;
@@ -736,6 +757,12 @@ footer a{
         text-align: center;
         padding: 20px 0 30px;
     }
+    .box-left{
+        text-align: unset;
+    }
+    .white-box{
+        width: auto;
+    }
 
 
     #limited img{
@@ -756,6 +783,42 @@ footer a{
     }
     .inner-pickup{
         display: block;
+    }
+
+
+    .arrow-2{
+        display: none;
+    }
+    .images{
+        width: 90vw;
+        padding: 60px;
+    }
+    .topic-item{
+        width: 84vw;
+        margin: 0 auto;
+    }
+    .one,.test1{
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    .two,.test2{
+        position: absolute;
+        left: 700px;
+    }
+    .three,.test3{
+        position: absolute;
+        left: 1400px;
+    }
+    .zero,.test4{
+        position: absolute;
+        left: -700px;
+        opacity: 0;
+    }
+    .four,.test5{
+        position: absolute;
+        left: 2100px;
+        opacity: 0;
     }
 
 
@@ -790,21 +853,43 @@ footer a{
 
 
     #journal{
-        padding: 50px 30px;
+        padding: 50px 0 10px;
         text-align: center;
         background-color: rgb(234, 234, 234);
     }
     .latest{
         width: 100%;
+        font-size: 0.9rem;
+    }
+    .journal-date{
+        font-size: 0.9rem;
     }
     .general{
         width: 100%;
         padding: unset;
+        align-items: flex-start;
+    }
+    .general-text{
+        margin-left: unset;
+        padding-top: 30px;
+        font-size: 0.8rem;
+    }
+    .general-date{
+        font-size: 0.8rem;
+        bottom: 10px;
     }
     .general img{
         padding: 10px;
-        width: 100px;
-        height: 100px;
+        max-width: 80px;
+        max-height: 80px;
+    }
+    .btn-journal{
+        margin: 30px auto;
+        font-size: 0.8rem;
+        width: 40%;
+    }
+    .btn-journal a{
+        padding: 10px 10px;
     }
 
 
@@ -826,29 +911,72 @@ footer a{
     }
 }
 
+
+@media(max-width:500px){
+    .home-content{
+        min-height: 60vh;
+    }
+    header{
+        font-size: 8px;
+        padding: 6px 10px;
+    }
+    .logo img{
+        width: 120px;
+    }
+    .icon-menu{
+        height: 20px;
+        margin: 0 0 0 20px;
+    }
+    .home-content p{
+        padding-top: 50%;
+        font-size: 1.65rem;
+        overflow: scroll;
+    }
+    #topics{
+        padding: 100px 10px;
+    }
+    .images{
+        width: 90vw;
+        padding: 10px;
+    }
+}
+
+
 @media(min-width:1500px){
+    .menu{
+        width: 25%;
+        padding: 30vw 100px;
+    }
     #campaign img{
         width: 37.5%;
     }
+    .inner-campaign{
+        justify-content: space-between;
+    }
     .inner-sale{
-        padding: 50px;
+        justify-content: space-between;
     }
     .sale img{
         max-width: 600px;
     }
     .white-box{
-        width: 560px;
+        width: 500px;
     }
-    .split-sale{
-        max-width: 15vw;
-    }#limited img{
-        width: 35%;
-        padding-left: 50px;
+    #limited img{
+        width: 37.5%;
+    }
+    .inner-limited{
+        max-width: 1150px;
+        justify-content: space-between;
     }
     #pickup{
         padding: 50px;
     }
     #pickup img{
-        width: 35%;
+        width: 37.5%;
+        margin-left: unset;
+    }
+    .inner-pickup{
+        max-width: 1150px;
     }
 }
