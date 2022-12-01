@@ -693,6 +693,25 @@ footer a{
     }
 
 
+    .menu{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .close-modal{
+        padding: 0;
+        right: 20px;
+    }
+    .about{
+        margin-bottom: 15px;
+    }
+    .sns{
+        padding-top: 20px;
+        margin-left: 3%;
+    }
+
+
     #thema{
         margin: auto 20px;
     }
