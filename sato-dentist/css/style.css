@@ -1,0 +1,467 @@
+@charset "UTF-8";
+/*共通部分*/
+html{
+    font-size: 100%;
+}
+body{
+    width: 100%;
+}
+img{
+    max-width: 100%;
+}
+li{
+    list-style: none;
+}
+.flex{
+    display: flex;
+}
+a{
+    text-decoration: none;
+}
+.wrapper{
+    max-width: 1500px;
+    width:calc(100% - 120px);
+    margin: 0 auto;
+}
+.inner{
+    width: calc(100% - 180px);
+}
+h2{
+    font-size: 2.5rem;
+    letter-spacing: 6px;
+}
+.display-blue{
+    color: #91C3E0;
+    font-weight: bold;
+}
+.shadow :hover{
+    filter: drop-shadow(10px 10px 0 gray);
+    background-color: white;
+    transition: all 1.5s;
+}
+.blue{
+    color: #91C3E0
+}
+.black{
+    color: rgb(49, 20, 20);
+}
+.gray{
+    color: dimgray;
+}
+.btn{
+    padding: 16px 40px;
+    border-radius: 40px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/*header*/
+header{
+    z-index: 10;
+    padding: 0 30px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+.header-top{
+    margin: 0 auto;
+}
+.header-top-disappear{
+    display: flex;
+    justify-content: right;
+    margin: 10px 20px 0;
+    align-items: center;
+}
+.head-consult{
+    position: relative;
+}
+.head-consult::before{
+    content: "↓";
+    font-weight: bold;
+    color: #91C3E0;
+    position: absolute;
+    bottom: -32px;
+    left: 24px;
+}
+.bg-orange{
+    background-color: orange;
+    color: white;
+    padding: 2px 24px;
+    border-radius: 20px;
+    margin-right: 30px;
+    font-size: 0.8rem;
+}
+.nav-number{
+    font-size: 1.5rem;
+    position: relative;
+}
+.nav-number::before{
+    content: "ご予約・お問い合わせ";
+    position: absolute;
+    top: -16px;
+    color: rgb(49, 20, 20);
+    font-size: 0.8rem;
+}/*疑似要素で上に「ご予約・お問い合わせ」を追加*/
+.blue{
+    color: rgb(106, 174, 237);
+}
+
+.header-top-remain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+}
+.header-right{
+    align-items: center;
+}
+.header-right a{
+    color: rgb(49, 20, 20);
+    letter-spacing: 2px;
+}
+.header-right li{
+    margin-left: 20px;
+    font-size: 0.8rem;
+}
+.web-appointment{
+    background: rgb(64, 146, 162);
+    padding: 16px 32px;
+    border-radius: 40px;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.remain-right{
+    margin-top: -100px;
+}
+
+.header-middle{
+    align-items: flex-end;
+    margin: 470px 0 0 100px;
+    color: white;
+    font-weight: bold;
+}
+.bg-white{
+    color: orange;
+    background-color: white;
+    padding: 8px 40px;
+    border-radius: 40px;
+    max-width: 500px;
+    width: 70vw;
+    margin: 5px 0 0 5px;
+}
+/*header*/
+
+
+/*home*/
+.home{
+    background-color: white;
+    width: 100%;
+    margin-top: 3.5%;
+    position: relative;
+}
+.home-background{
+    background-image: url(../images/home_slide1.jpg);
+    background-size: cover;
+    background-position: center top;
+    height: 135vh;
+    border-radius: 100px;
+    margin: 20px auto 0;
+    max-width: 1500px;
+    max-height: 900px;
+}
+.home-text{
+    position: absolute;
+    top: 40%;
+    left: 180px;
+    color: white;
+}
+.home-text-explanation{
+    margin-top: 20px;
+    letter-spacing: 4px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+/*home*/
+
+
+/*content*/
+.content{
+    padding: 200px 0;
+}
+.content-top{
+    align-items: center;
+    color: dimgray;
+    margin-bottom: 60px;
+}
+.content-top h2{
+    font-size: 3rem;
+    margin-right: 70px;
+}
+.content-top p{
+    border-left: gray 2px solid;
+    padding-left: 70px;
+}
+
+.content-grid{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.content-element{
+    display: block;
+    text-align: center;
+    background-color: rgb(237, 236, 236);
+    padding: 40px 10px;
+    border-radius: 50px;
+    position: relative;
+}
+.content-element p{
+    font-size: 1.1rem;
+    height: 3rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: dimgray;
+    position: relative;
+}
+.one-colomn{
+    line-height: 4rem;
+}
+.contact-element p ::after{
+    /*疑似要素で「>」*/
+}
+/*content*/
+
+
+/*character*/
+.character{
+    background-color: #91C3E0;
+    margin-top: -7.9px;
+    padding-top: 70px;
+    text-align: center;
+}
+.character-title{
+    padding-bottom: 30px;
+    margin-bottom: 200px;
+    color: white;
+    border-bottom: white 5px solid;
+}
+.character-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+}
+.character-element{
+    text-align: left;
+    position: relative;
+    z-index: 2;
+}
+.character-element::before{
+    color: white;
+    font-size: 5rem;
+    position: absolute;
+    top: -75px;
+    left: -40px;
+    z-index: -1;
+}
+.character-one::before{
+    content: "01";
+}
+.character-two::before{
+    content: "02";
+}
+.character-three::before{
+    content: "03";
+}
+.character-four::before{
+    content: "04";
+}
+.character-five::before{
+    content: "05";
+}
+.character-six::before{
+    content: "06";
+}
+.character-element img{
+    border-radius: 30px;
+}
+.character-subtitle{
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin: 50px 0 100px;
+    height: 3rem;
+}
+
+.character-text{
+    margin-bottom: 120px;
+    color: rgb(53, 29, 11);
+    line-height: 1.8rem;
+    height: 6rem;
+}
+.btn-character{
+    border: white 2px solid;
+    width: 70%;
+    margin: 0 auto 200px;
+}
+.btn-character a p{
+    color: white;
+    font-size: 0.9rem;
+}
+/*character*/
+
+
+/*topic*/
+.line2{
+    margin-top: -1px;
+    height: 110px;
+    width: 100%;
+    z-index: 10;
+    background-color: #91C3E0;
+}
+.topic{
+    text-align: center;
+}
+.topic-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+.topic-title{
+    color: black;
+    border-bottom: #91C3E0 5px solid;
+}
+.topic-element{
+    text-align: left;
+    background-color: antiquewhite;
+    margin-bottom: 50px;
+}
+.topic-element img{
+    padding: 0 15px;
+}
+.topic-subtitle{
+    font-size: 1.2rem;
+    margin: 30px 0;
+    height: 3rem;
+}
+.topic-text{
+    font-size: 0.9rem;
+    height: 6rem;
+}
+.hover-red:hover{
+    color: rgb(202, 56, 16);
+}
+.btn-more{
+    padding: 30px 80px;
+    border-radius: 80px;
+    background-color: gray;
+    width: 25%;
+}
+.more{
+    color: white;
+}
+.btn-more:hover{
+    background-color: #062b40;
+    transition: all 1s;
+}
+/*topic*/
+
+
+/*recruit*/
+.recruit{
+    text-align: center;
+    padding: 200px 0;
+    margin-bottom: 150px;
+    background: linear-gradient(0deg,#bec4c4 0%,#bec4c4 50%,white 50%,white 100%);
+}
+.recruit-flex{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 35px;
+}
+.recruit img{
+    width: 47%;
+}
+/*recruit*/
+
+
+/*nav*/
+.navigation{
+    margin-bottom: 100px;
+}
+.nav-left img{
+    margin-bottom: 70px;
+}
+.num-bigger{
+    font-size: 3rem;
+    color: #91C3E0;
+}
+.num-bigger::before{
+    font-size: 1.2rem;
+}
+
+.nav-right{
+    /*inserting map*/
+}
+/*nav*/
+
+
+/*footer*/
+footer{
+    background-color: #F4F4F4;
+    padding: 100px 0;
+    position: relative;
+}
+footer img{
+    position: absolute;
+    top: -20px;
+}
+.footer-flex{
+    justify-content: space-between;
+}
+.footer-left{
+    width: 42%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-left-element{
+    font-weight: bold;
+    letter-spacing: 3px;
+    width: 90%;
+    height: 3rem;
+}
+.footer-left-element::before{
+    content: "> ";
+    color: #91C3E0;
+    font-weight: bold;
+}
+.footer-right{
+    width: 50%;
+    padding-right: 20px;
+}
+.longer{
+    white-space: nowrap;
+}
+
+.footer-right-top{
+    font-weight: bold;
+    letter-spacing: 3px;
+    width: 90%;
+    height: 3rem;
+}
+.footer-right-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+.footer-right-element{
+    font-size: 0.8rem;
+    height: 1.5rem;
+}
+.footer-right-element::before{
+    content: "- ";
+    font-weight: bold;
+}
+/*footer*/
