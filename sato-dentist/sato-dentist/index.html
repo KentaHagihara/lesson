@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <title>dentist-sato-trace</title>
+</head>
+<body>
+    <header>
+        <div class="header-top">            
+            <ul class="header-top-disappear">
+                <li class="bg-orange">歯科医師臨床研修プログラム</li>
+                <li class="bg-orange">採用サイト</li>
+                <li class="blue">アクセス</li>
+            </ul><!--disappear-->
+            <div class="header-top-remain">
+                <div class="remain-left">
+                    <picture>
+                        <source srcset="./images/logo-header.png">
+                        <img src="./images/logo-header.png" alt="">                        
+                    </picture>
+                </div><!--disappear-->
+                <div class="remain-right">
+                    <nav>
+                        <ul class="flex header-right">
+                            <li><a href=""><p class="display-blue">ホーム</p></a></li>
+                            <li><a href=""><p>当院について</p></a></li>
+                            <li><a href=""><p>ドクター紹介</p></a></li>
+                            <li><a class="head-consult" href=""><p>診療内容</p></a></li><!--疑似要素で下に青矢印つける-->
+                            <li><a href=""><p>診療設備</p></a></li>
+                            <li><p class="blue nav-number">0570-25-2010</p></li><!--疑似要素で上に「ご予約・お問い合わせ」を入れる-->
+                            <li class="web-appointment"><p>>初診web予約</p></li>
+                        </ul>
+                    </nav>
+                </div> 
+            </div><!--remain-->
+
+            <div class="schroll flex">
+                <picture>
+                    <source srcset="./images/logo-footer.png">
+                    <img src="./images/logo-footer.png" alt="">                        
+                </picture>
+                <nav>
+                    <ul class="flex schroll-right">
+                        <li><a href=""><p class="display-blue black blue">ホーム</p></a></li>
+                        <li><a href=""><p class="black">当院について</p></a></li>
+                        <li><a href=""><p class="black">ドクター紹介</p></a></li>
+                        <li><a class="head-consult" href=""><p class="black">診療内容</p></a></li><!--疑似要素で下に青矢印つける-->
+                        <li><a href=""><p class="black">診療設備</p></a></li>
+                        <li><p class="blue nav-number black">0570-25-2010</p></li><!--疑似要素で上に「ご予約・お問い合わせ」を入れる-->
+                        <li class="web-appointment"><p>>初診web予約</p></li>
+                    </ul>
+                </nav>
+            </div><!--schroll-->
+
+
+        </div>
+        <div class="header-middle flex">
+            <div class="header-middle-left">
+                <p>お知らせ</p>
+                <div class="text-changing">
+                    <p class="bg-white">2022.04.01 ドクター紹介を更新しました</p>
+                </div>
+            </div>
+            <div class="header-middle-right flex"><!--hoverで表示、それ以外は右端に収納/schroll量によって変化させる-->
+                <div class="hours-title">
+                    <p class="header-colomn blue">🕒診療時間</p>
+                </div>
+                <div class="inner-table hours-table">
+                    <table class="black flex">
+                        <div>
+                            <tr>
+                                <th>診療時間</th>
+                                <td>月</td>
+                                <td>火</td>
+                                <td>水</td>
+                                <td>木</td>
+                                <td>金</td>
+                                <td>土</td>
+                                <td>日</td>
+                                <td class="holidays">祝祭日</td>   
+                            </tr>
+                        </div>
+                        <tr>
+                            <th>8:30-12:30</th>
+                            <td class="open"></td>
+                            <td class="open"></td>
+                            <td class="open"></td>
+                            <td class="open"></td>
+                            <td class="open"></td>
+                            <td class="open"></td>
+                            <td class="open"></td>
+                            <td class="open"></td>   
+                        </tr>
+                        <tr>
+                            <th>14:00-18:00</th>
+                            <td class="open"></td>
+                            <td class="open"></td>
+                            <td class="open"></td>
+                            <td class="open"></td>
+                            <td class="open"></td>
+                            <td class="open"></td>
+                            <td class="special-schedule">17時まで</td>
+                            <td class="open"></td>   
+                        </tr>
+                    </table>
+                    <div class="adress flex">
+                        <p class="gray">岐阜県美濃加茂市古井町下古井2542-1</p>
+                        <a class="blue btn-map" href="">
+                            <p>マップを見る</p>
+                        </a>
+                    </div>
+                </div><!--navigationでも使う-->
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="home"><!--homeではbackground-colorを設定-->
+            <div class="wrapper home-background"><!--wrapperでmax-width,text-align:centerを設定/home-backgroundで背景画像を指定-->            
+                <div class="home-text">
+                    <h2>健康と笑顔を守る</h2>
+                    <p class="home-text-explanation">患者さんに合わせた治療法を<br>ご提案致します</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="wrapper inner">                                
+                <div class="title content-top flex">
+                    <h2>診療内容</h2>
+                    <p class="content-top-right">当院では、一般歯科・小児歯科、矯正歯科それぞれの専門医師により、<br>虫歯や歯周病治療だけでなく、矯正治療まで総合的に治療することが可能です。</p>
+                </div>
+                <div class="content-grid"><!--画像とテキスト一体のもの複数-->
+                    <a class="shadow" href=""><!--画像＆テキストセット/これを複製-->
+                        <div class="content-element">
+                            <img src="./images/icn_menu_white.png" alt=""><!--画像のみ-->
+                            <p class="content-img-text">審美歯科<br>ホワイトニング</p><!--テキストのみ-->
+                        </div>
+                    </a>
+                    <a class="shadow" href="">
+                        <div class="content-element">
+                            <img src="./images/icn_menu_white.png" alt=""><!--画像のみ-->
+                            <p class="content-img-text">審美歯科<br>ホワイトニング</p><!--テキストのみ-->
+                        </div>
+                    </a>
+                    <a class="shadow" href=""><!--画像＆テキストセット/これを複製-->
+                        <div class="content-element">
+                            <img src="./images/icn_menu_white.png" alt=""><!--画像のみ-->
+                            <p class="content-img-text one-colomn">ホワイトニング</p><!--テキストのみ-->
+                        </div>
+                    </a>
+                    <a class="shadow" href="">
+                        <div class="content-element">
+                            <img src="./images/icn_menu_white.png" alt=""><!--画像のみ-->
+                            <p class="content-img-text one-colomn">ホワイトニング</p><!--テキストのみ-->
+                        </div>
+                    </a>
+                    <a class="shadow" href=""><!--画像＆テキストセット/これを複製-->
+                        <div class="content-element">
+                            <img src="./images/icn_menu_white.png" alt=""><!--画像のみ-->
+                            <p class="content-img-text">審美歯科<br>ホワイトニング</p><!--テキストのみ-->
+                        </div>
+                    </a>
+                    <a class="shadow" href="">
+                        <div class="content-element">
+                            <img src="./images/icn_menu_white.png" alt=""><!--画像のみ-->
+                            <p class="content-img-text one-colomn">審美歯科</p><!--テキストのみ-->
+                        </div>
+                    </a>
+                    <a class="shadow" href=""><!--画像＆テキストセット/これを複製-->
+                        <div class="content-element">
+                            <img src="./images/icn_menu_white.png" alt=""><!--画像のみ-->
+                            <p class="content-img-text">審美歯科<br>ホワイトニング</p><!--テキストのみ-->
+                        </div>
+                    </a>
+                    <a class="shadow" href="">
+                        <div class="content-element">
+                            <img src="./images/icn_menu_white.png" alt=""><!--画像のみ-->
+                            <p class="content-img-text">審美歯科<br>ホワイトニング</p><!--テキストのみ-->
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        
+        <img src="./images/line-1.png" alt="">
+        <div class="character">
+            <div class="wrapper">
+                <h2 class="character-title">当院の特徴</h2>
+                <div class="character-grid">
+                    <div class="character-element character-one"><!--一度CSS作ってから複製しましょう-->
+                        <img src="./images/top_point_01.jpg" alt="">
+                        <p class="character-subtitle one-colomn">休日歯科診療</p>
+                        <p class="character-text">総勢80名のスタッフが在籍しているため、GWやお盆、日曜、祝祭日の診療が可能です。美濃加茂市、可児市ではお休みの日に対応できる数少ない歯科医院です。</p>
+                        <div class="btn btn-character">
+                            <a href="">
+                                <p>診察日を詳しく見る</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="character-element character-two"><!--一度CSS作ってから複製しましょう-->
+                        <img src="./images/top_point_01.jpg" alt="">
+                        <p class="character-subtitle one-colomn">休日歯科診療</p>
+                        <p class="character-text">総勢80名のスタッフが在籍しているため、GWやお盆、日曜、祝祭日の診療が可能です。美濃加茂市、可児市ではお休みの日に対応できる数少ない歯科医院です。</p>
+                        <div class="btn btn-character">
+                            <a href="">
+                                <p>診察日を詳しく見る</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="character-element character-three"><!--一度CSS作ってから複製しましょう-->
+                        <img src="./images/top_point_01.jpg" alt="">
+                        <p class="character-subtitle one-colomn">休日歯科診療</p>
+                        <p class="character-text">総勢80名のスタッフが在籍しているため、GWやお盆、日曜、祝祭日の診療が可能です。美濃加茂市、可児市ではお休みの日に対応できる数少ない歯科医院です。</p>
+                        <div class="btn btn-character">
+                            <a href="">
+                                <p>診察日を詳しく見る</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="character-element character-four"><!--一度CSS作ってから複製しましょう-->
+                        <img src="./images/top_point_01.jpg" alt="">
+                        <p class="character-subtitle">休日<br>歯科診療</p>
+                        <p class="character-text">総勢80名のスタッフが在籍しているため、GWやお盆、日曜、祝祭日の診療が可能です。美濃加茂市、可児市ではお休みの日に対応できる数少ない歯科医院です。</p>
+                        <div class="btn btn-character">
+                            <a href="">
+                                <p>診察日を詳しく見る</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="character-element character-five"><!--一度CSS作ってから複製しましょう-->
+                        <img src="./images/top_point_01.jpg" alt="">
+                        <p class="character-subtitle one-colomn">休日歯科診療</p>
+                        <p class="character-text">総勢80名のスタッフが在籍しているため、GWやお盆、日曜、祝祭日の診療が可能です。美濃加茂市、可児市ではお休みの日に対応できる数少ない歯科医院です。<br>テキストのみ<br>テキストのみ</p>
+                        <div class="btn btn-character">
+                            <a href="">
+                                <p>診察日を詳しく見る</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="character-element character-six"><!--一度CSS作ってから複製しましょう-->
+                        <img src="./images/top_point_01.jpg" alt="">
+                        <p class="character-subtitle one-colomn">休日歯科診療</p>
+                        <p class="character-text">総勢80名のスタッフが在籍しているため、GWやお盆、日曜、祝祭日の診療が可能です。美濃加茂市、可児市ではお休みの日に対応できる数少ない歯科医院です。</p>
+                        <div class="btn btn-character">
+                            <a href="">
+                                <p>診察日を詳しく見る</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <img class="line2" src="./images/line-2.png" alt="">
+        <div class="topic">
+            <div class="wrapper">
+                <h2 class="topic-top">歯のお話</h2>
+                <div class="topic-grid">
+                    <!--一度CSS作ってから複製しましょう-->
+                    <a href="">
+                        <div class="topic-element hover-red">
+                            <p class="date blue">2022.12.1</p>
+                            <img src="./images/icn_menu_adult.png" alt="">
+                            <p class="topic-subtitle black one-colomn">高齢者の口腔衛生について</p>
+                            <p class="topic-text gray">こんにちは！寒い寒い毎日ですが、毎日ハミガキしてますか？今月のお便りは高齢者の口腔衛生についてです！</p>    
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="topic-element hover-red">
+                            <p class="date blue">2022.12.1</p>
+                            <img src="./images/icn_menu_adult.png" alt="">
+                            <p class="topic-subtitle black">口腔ケアで感染症を予防しましょう</p>
+                            <p class="topic-text gray">こんにちは！冬がやってきました！！！⛄✨毎朝さむい、さむい、と言いながら出勤しております！そんな冬ですか・・・</p>    
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="topic-element hover-red">
+                            <p class="date blue">2022.12.1</p>
+                            <img src="./images/icn_menu_adult.png" alt="">
+                            <p class="topic-subtitle black one-colomn">高齢者の口腔衛生について</p>
+                            <p class="topic-text gray">こんにちは！寒い寒い毎日ですが、毎日ハミガキしてますか？今月のお便りは高齢者の口腔衛生についてです！</p>    
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="topic-element hover-red">
+                            <p class="date blue">2022.12.1</p>
+                            <img src="./images/icn_menu_adult.png" alt="">
+                            <p class="topic-subtitle black one-colomn">高齢者の口腔衛生について</p>
+                            <p class="topic-text gray">こんにちは！寒い寒い毎日ですが、毎日ハミガキしてますか？今月のお便りは高齢者の口腔衛生についてです！</p>    
+                        </div>
+                    </a>
+                </div>
+                <a href="">
+                    <div class="btn btn-more">
+                        <p class="more">もっと見る</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="recruit"><!--homeではbackground-colorを設定/縦半分で色変える-->
+            <div class="wrapper recruit-flex">
+                <img src="./images/bnr_recruit.jpg" alt="">
+                <img src="./images/bnr_nursing.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="navigation">
+            <div class="wrapper flex">
+                <div class="nav-left">
+                    <img src="./images/logo-footer.png" alt="">
+                    <p class="nav-number num-bigger">000-xxxx-xxxx</p>
+                    <div class="inner-table hours-table">
+                        <table class="black flex">
+                            <div>
+                                <tr>
+                                    <th>診療時間</th>
+                                    <td>月</td>
+                                    <td>火</td>
+                                    <td>水</td>
+                                    <td>木</td>
+                                    <td>金</td>
+                                    <td>土</td>
+                                    <td>日</td>
+                                    <td class="holidays">祝祭日</td>   
+                                </tr>
+                            </div>
+                            <tr>
+                                <th>8:30-12:30</th>
+                                <td class="open"></td>
+                                <td class="open"></td>
+                                <td class="open"></td>
+                                <td class="open"></td>
+                                <td class="open"></td>
+                                <td class="open"></td>
+                                <td class="open"></td>
+                                <td class="open"></td>   
+                            </tr>
+                            <tr>
+                                <th>14:00-18:00</th>
+                                <td class="open"></td>
+                                <td class="open"></td>
+                                <td class="open"></td>
+                                <td class="open"></td>
+                                <td class="open"></td>
+                                <td class="open"></td>
+                                <td class="special-schedule">17時まで</td>
+                                <td class="open"></td>   
+                            </tr>
+                        </table>
+                        <div class="adress flex">
+                            <p class="gray">岐阜県美濃加茂市古井町下古井2542-1</p>
+                            <a class="blue btn-map" href="">
+                                <p>マップを見る</p>
+                            </a>
+                        </div>
+                    </div><!--headerと同じもの-->
+                </div>
+                <div class="map nav-right">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10604.576337419925!2d136.61155812761322!3d35.37042128825601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1671353550071!5m2!1sja!2sjp" width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <img class="line-three" src="./images/line-3.png" alt="">
+        <div class="wrapper flex footer-flex">
+            <div class="footer-left">
+                <ul class="footer-left-one ">
+                    <li><a href=""><p class="footer-left-element black">ホーム</p></a></li>
+                    <li><a href=""><p class="footer-left-element black">当院について</p></a></li>
+                    <li><a href=""><p class="footer-left-element black">ドクター紹介</p></a></li>
+                    <li><a href=""><p class="footer-left-element black">診療設備</p></a></li>
+                    <li><a href=""><p class="footer-left-element black">インフォメーション</p></a></li>
+                </ul>
+                <ul class="footer-left-two">
+                    <li><a href=""><p class="footer-left-element black longer">歯科医師臨床研修プログラム</p></a></li>
+                    <li><a href=""><p class="footer-left-element black">プライバシーポリシー</p></a></li>
+                    <li><a href=""><p class="footer-left-element black">サイトマップ</p></a></li>
+                    <li><a href=""><p class="footer-left-element black">採用サイト</p></a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <p class="footer-right-top">診療内容</p>
+                <ul class="footer-right-content grid">
+                    <li><a href=""><p class="footer-right-element gray">審美歯科・ホワイトニング</p></a></li>
+                    <li><a href=""><p class="footer-right-element gray">一般歯科</p></a></li>
+                    <li><a href=""><p class="footer-right-element gray">審美歯科・ホワイトニング</p></a></li>
+                    <li><a href=""><p class="footer-right-element gray">一般歯科</p></a></li>
+                    <li><a href=""><p class="footer-right-element gray">審美歯科・ホワイトニング</p></a></li>
+                    <li><a href=""><p class="footer-right-element gray">審美歯科・ホワイトニング</p></a></li>
+                    <li><a href=""><p class="footer-right-element gray">審美歯科・ホワイトニング</p></a></li>
+                    <li><a href=""><p class="footer-right-element gray">審美歯科・ホワイトニング</p></a></li>
+                    <li><a href=""><p class="footer-right-element gray">審美歯科・ホワイトニング</p></a></li>
+                    <li><a href=""><p class="footer-right-element gray">審美歯科・ホワイトニング</p></a></li>
+                </ul>
+                <div class="flex flex-sns">
+                    <img class="sns" src="./images/logo-instagram.png" alt="">
+                    <img class="sns" src="./images/logo-twitter.svg" alt="">
+                    <img class="sns" src="./images/logo-facebook.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <small class="footer-bottom-right">&copy; copyright</small>
+    </footer>
+    
+</body>
+</html>
