@@ -14,6 +14,7 @@ li{
 }
 .flex{
     display: flex;
+    justify-content: space-between;
 }
 a{
     text-decoration: none;
@@ -35,10 +36,12 @@ h2{
     font-weight: bold;
 }
 .shadow :hover{
-    filter: drop-shadow(10px 10px 0 gray);
+    box-shadow: 0 0 20px rgba(47, 64, 80, .2);
     background-color: white;
     transition: all 1.5s;
 }
+/*なんかうまくいかないから、shadowではなく裏の画像表示とかの方がよさそう*/
+
 .blue{
     color: #91C3E0
 }
@@ -55,22 +58,60 @@ h2{
     margin: 0 auto;
 }
 
+.hide{
+    display: none;
+    transition: all 1s;
+}
+
+
+/*home*/
+.home{
+    background-color: white;
+    width: 100%;
+    margin-top: 3.5%;
+    position: relative;
+}
+.home-background{
+    background-image: url(../images/home_slide1.jpg);
+    background-size: cover;
+    background-position: center top;
+    height: 135vh;
+    border-radius: 100px;
+    margin: 20px auto 0;
+    max-width: 1500px;
+    max-height: 900px;
+}
+.home-text{
+    position: absolute;
+    top: 40%;
+    left: 180px;
+    color: white;
+}
+.home-text-explanation{
+    margin-top: 20px;
+    letter-spacing: 4px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+/*home*/
+
+
 /*header*/
 header{
-    z-index: 10;
-    padding: 0 30px;
     width: 100%;
-    position: absolute;
-    top: 0;
 }
 .header-top{
     margin: 0 auto;
+    z-index: 10;
 }
 .header-top-disappear{
     display: flex;
     justify-content: right;
     margin: 10px 20px 0;
     align-items: center;
+    position: absolute;
+    top: 0;
+    right: 30px;
 }
 .head-consult{
     position: relative;
@@ -110,7 +151,11 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 100%;
+    width: 100%;
+    transition: all 1s;
+    padding: 0 30px;
+    position: absolute;
+    top: 30px;
 }
 .header-right{
     align-items: center;
@@ -120,7 +165,7 @@ header{
     letter-spacing: 2px;
 }
 .header-right li{
-    margin-left: 20px;
+    margin-left: 10px;
     font-size: 0.8rem;
 }
 .web-appointment{
@@ -136,11 +181,90 @@ header{
     margin-top: -100px;
 }
 
+
+
+/*header-top-disappearを消す
+  remain-leftを右に寄せる
+  header-rightを左に寄せる
+　header-top-remainの背景白、wrapper追加*/
+.hide{
+    display: none;
+}
+.to-right{
+    transform: translateX(40px);
+    transition: all 1s;
+}
+.to-left{
+    transform: translateX(-40px);
+    transform: translateY(50px);
+    transition: all 1s;
+}
+
+
+
+/*schrool*/
+.scroll{
+    background-color: white;
+    padding: 30px 60px;  
+    border-radius: 60px;
+    align-items: center;  
+    margin: 0 auto;
+    max-width: 1500px;
+    position: absolute;
+    width: 94%;
+    top: 40px;
+    left: 0;
+    right: 0;
+    position: fixed;
+    transition: all 1s;
+    z-index: 10000;
+}
+.scroll img{
+    width: 200px;
+}
+.scroll-right{
+    align-items: center;
+}
+.scroll-right li{
+    margin-right: 30px;
+    font-size: 0.8rem;
+}
+
 .header-middle{
     align-items: flex-end;
-    margin: 470px 0 0 100px;
     color: white;
     font-weight: bold;
+    transition: all 1s;
+    position: absolute;
+    top: 500px;
+    right: 0;
+    width: 100%;
+    overflow: hidden;
+}
+.header-middle-left{
+    margin-left: 100px;
+}
+.header-middle-right{
+    margin-left: -10%;
+    z-index: 10;
+    background-color: white;
+    border-radius: 50px 0 0 50px; /*右側の角は削らずに、そしてpaddingも減らす*/
+    padding: 20px 50px 20px 30px;
+    justify-content: right;
+    align-items: center;
+    box-shadow: 0 0 50px rgba(47, 64, 80, .5);
+
+}
+.fix-hmr{
+    position: fixed;
+    top: 180px;
+    margin-left: -90%;
+    background-color: #062b40;
+    right: -48vw;
+}
+.fix-hmr:hover{
+    right: 30px;
+    box-shadow: unset;
 }
 .bg-white{
     color: orange;
@@ -150,40 +274,60 @@ header{
     max-width: 500px;
     width: 70vw;
     margin: 5px 0 0 5px;
-}
-/*header*/
-
-
-/*home*/
-.home{
-    background-color: white;
-    width: 100%;
-    margin-top: 3.5%;
+    transition: all 1s;
     position: relative;
 }
-.home-background{
-    background-image: url(../images/home_slide1.jpg);
-    background-size: cover;
-    background-position: center top;
-    height: 135vh;
-    border-radius: 100px;
-    margin: 20px auto 0;
-    max-width: 1500px;
-    max-height: 900px;
-}
-.home-text{
+.bg-white::after{
+    content: ">";
     position: absolute;
-    top: 40%;
-    left: 180px;
-    color: white;
-}
-.home-text-explanation{
-    margin-top: 20px;
-    letter-spacing: 4px;
-    font-size: 1.3rem;
+    right: 40px;
+    color: orange;
     font-weight: bold;
 }
-/*home*/
+.hours-title{
+    padding: 0 20px;
+}
+.header-colomn{
+    writing-mode: vertical-lr;
+    padding-right: 20px;
+    border-right: #bec4c4 2px solid;
+    letter-spacing: 5px;
+}
+.holidays{
+    font-size: 0.8rem;
+}
+.open::after{
+	display: inline-block;
+	content: "";
+	margin-top: 6px;
+	margin-right: 7px;
+	width: 10px;
+	height: 10px;
+	vertical-align: top;
+	border-radius: 5px;
+	background-color: #91C3E0;
+}
+th,td{
+    padding: 10px 1vw;
+    max-width: 200px;
+    border-bottom: #bec4c4 1px solid;
+    text-align: center;
+    white-space: nowrap;
+}
+.adress{
+    padding-top: 20px;
+    letter-spacing: 3px;
+}
+.btn-map{
+    padding: 0.1rem 24px;
+    border-radius: 24px;
+    border: #91C3E0 1px solid;
+    margin-left: 50px;
+}
+.btn-map p{
+    font-size: 0.8rem;
+}
+/*header*/
 
 
 /*content*/
@@ -194,14 +338,16 @@ header{
     align-items: center;
     color: dimgray;
     margin-bottom: 60px;
+    justify-content: unset;
 }
 .content-top h2{
     font-size: 3rem;
-    margin-right: 70px;
+    padding-right: 70px;
+    border-right: gray 4px solid;
+    line-height: 2rem;
 }
 .content-top p{
-    border-left: gray 2px solid;
-    padding-left: 70px;
+    margin-left: 70px;
 }
 
 .content-grid{
@@ -226,9 +372,15 @@ header{
     position: relative;
 }
 .one-colomn{
-    line-height: 4rem;
+    line-height: 3rem;
 }
-.contact-element p ::after{
+.content-img-text::after{
+    content: ">";
+    color: orange;
+    font-size: 1.1rem;
+    position: absolute;
+    right: 25px;
+    bottom: 10px;
     /*疑似要素で「>」*/
 }
 /*content*/
@@ -245,12 +397,21 @@ header{
     padding-bottom: 30px;
     margin-bottom: 200px;
     color: white;
-    border-bottom: white 5px solid;
+    position: relative;
 }
 .character-grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 32px;
+}
+.character-title::after{
+    content: "_";
+    color: white;
+    font-size: 4rem;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
 }
 .character-element{
     text-align: left;
@@ -323,32 +484,50 @@ header{
 }
 .topic{
     text-align: center;
+    padding-top: 100px;
 }
 .topic-grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 40px;
 }
-.topic-title{
-    color: black;
-    border-bottom: #91C3E0 5px solid;
-}
-.topic-element{
-    text-align: left;
-    background-color: antiquewhite;
+.topic-top{
+    position: relative;
+    padding-bottom: 25px;
     margin-bottom: 50px;
 }
+.topic-top::after{
+    content: "_";
+    font-size: 4rem;
+    color: #91C3E0;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+}
+.topic-element{
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 10px 5px;
+}
+.date{
+    text-align: left;
+}
 .topic-element img{
-    padding: 0 15px;
+    padding: 20px 10%;
+    width: 80%;
+    height: 250px;
 }
 .topic-subtitle{
     font-size: 1.2rem;
     margin: 30px 0;
     height: 3rem;
+    text-align: left;
 }
 .topic-text{
     font-size: 0.9rem;
     height: 6rem;
+    text-align: left;
 }
 .hover-red:hover{
     color: rgb(202, 56, 16);
@@ -397,13 +576,10 @@ header{
 .num-bigger{
     font-size: 3rem;
     color: #91C3E0;
+    margin-bottom: 50px;
 }
 .num-bigger::before{
     font-size: 1.2rem;
-}
-
-.nav-right{
-    /*inserting map*/
 }
 /*nav*/
 
@@ -414,7 +590,7 @@ footer{
     padding: 100px 0;
     position: relative;
 }
-footer img{
+.line-three{
     position: absolute;
     top: -20px;
 }
@@ -422,7 +598,7 @@ footer img{
     justify-content: space-between;
 }
 .footer-left{
-    width: 42%;
+    width: 40%;
     display: flex;
     justify-content: space-between;
 }
@@ -438,8 +614,8 @@ footer img{
     font-weight: bold;
 }
 .footer-right{
-    width: 50%;
-    padding-right: 20px;
+    width: 55%;
+    padding-left:20px;
 }
 .longer{
     white-space: nowrap;
@@ -455,6 +631,7 @@ footer img{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
+    margin-bottom: 30px;
 }
 .footer-right-element{
     font-size: 0.8rem;
@@ -463,5 +640,17 @@ footer img{
 .footer-right-element::before{
     content: "- ";
     font-weight: bold;
+}
+.flex-sns{
+    justify-content: left;
+}
+.sns{
+    width: 35px;
+    height: 35px;
+    margin-right: 20px;
+}
+.footer-bottom-right{
+    padding-top: 50px;
+    float: right;
 }
 /*footer*/
