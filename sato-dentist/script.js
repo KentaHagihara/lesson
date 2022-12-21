@@ -19,7 +19,8 @@ $(function(){
             }
             if(scroll > 300){
                 $('.header-middle-right').addClass('fix-hmr');
-            } else if(scroll < 200) {
+                $('.header-middle-left').css('margin-top','142px');                
+            } else if(scroll < 300) {
                 $('.header-middle-right').removeClass('fix-hmr');                
             }
         })
