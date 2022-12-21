@@ -152,7 +152,7 @@ header{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    transition: all 1s;
+    transition: top 1s, background-color 0.5s; /*要確認*/
     padding: 0 30px;
     position: absolute;
     top: 30px;
@@ -233,13 +233,12 @@ header{
 .header-middle{
     align-items: flex-end;
     color: white;
-    font-weight: bold;
-    transition: all 1s;
     position: absolute;
     top: 500px;
-    right: 0;
+    font-weight: bold;
     width: 100%;
     overflow: hidden;
+    margin-right: unset;
 }
 .header-middle-left{
     margin-left: 100px;
@@ -253,18 +252,20 @@ header{
     justify-content: right;
     align-items: center;
     box-shadow: 0 0 50px rgba(47, 64, 80, .5);
-
+    right: 0;
+    transition: all 1s;
 }
 .fix-hmr{
     position: fixed;
     top: 180px;
-    margin-left: -90%;
-    background-color: #062b40;
-    right: -48vw;
+    right: -50vw;
+    background-color: white;
+    box-shadow: 0 0 50px rgba(47, 64, 80, .5);
+    transition: all 1s;
 }
 .fix-hmr:hover{
-    right: 30px;
-    box-shadow: unset;
+    right: 0;
+    box-shadow: 0 0 50px rgba(47, 64, 80, .5);
 }
 .bg-white{
     color: orange;
